@@ -1,36 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://alrobles.github.io/rosario/404.html</loc>
-  </url>
-  <url>
-    <loc>https://alrobles.github.io/rosario/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://alrobles.github.io/rosario/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://alrobles.github.io/rosario/index.html</loc>
-  </url>
-  <url>
-    <loc>https://alrobles.github.io/rosario/reference/czekanowski_index.html</loc>
-  </url>
-  <url>
-    <loc>https://alrobles.github.io/rosario/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://alrobles.github.io/rosario/reference/pianka_index.html</loc>
-  </url>
-  <url>
-    <loc>https://alrobles.github.io/rosario/reference/pipe.html</loc>
-  </url>
-  <url>
-    <loc>https://alrobles.github.io/rosario/reference/rosario.html</loc>
-  </url>
-  <url>
-    <loc>https://alrobles.github.io/rosario/reference/temp_overlap.html</loc>
-  </url>
-  <url>
-    <loc>https://alrobles.github.io/rosario/reference/vec_permutation.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://alrobles.github.io/rosario/404.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/LICENSE.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/authors.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/index.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/reference/czekanowski_index.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/reference/ex1.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/reference/get_null_model.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/reference/index.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/reference/pianka_index.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/reference/pipe.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/reference/rescale_matrix.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/reference/rosario.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/reference/rosario_sample.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/reference/temp_overlap.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/reference/temp_overlap_df.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/reference/temp_overlap_matrix.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/reference/vec_permutation.html</loc></url>
 </urlset>
+
