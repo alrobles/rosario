@@ -10,21 +10,20 @@
 #' temp_overlap(ex1, method = "pianka")
 #' ex1_rescale <- rescale_matrix(ex1)
 #' temp_overlap(ex1_rescale, method = "czekanowski")
-
 temp_overlap <- function(mat, method = c("pianka", "czekanowski")) {
-
-
-  if(is.data.frame(mat)){
+  if (is.data.frame(mat)) {
     mat <- as.matrix(mat)
   }
 
-  flag <- Map(is.numeric, mat ) |> unlist() |> all()
-  if(!flag){
+  flag <- Map(is.numeric, mat) |>
+    unlist() |>
+    all()
+  if (!flag) {
     stop("The input matrix is not numeric")
   }
 
   method <- match.arg(method)
-  if(method == "czekanowski"){
+  if (method == "czekanowski") {
     mat <- rescale_matrix(mat)
   }
 

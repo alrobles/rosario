@@ -13,11 +13,10 @@
 #' rowSums(ex1_rescale)
 #' @export
 #'
-rescale_matrix <- function(m){
-  diag_m <- diag(1/rowSums(m))
+rescale_matrix <- function(m) {
+  diag_m <- diag(1 / rowSums(m))
   m_rescale <- diag_m %*% m
   colnames(m_rescale) <- colnames(m)
   rownames(m_rescale) <- rownames(m)
   m_rescale
 }
-

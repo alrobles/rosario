@@ -38,7 +38,7 @@ ex1
 The `rosario` function creates the set of cyclic shifts and their mirror images (reverse order), preserving shape while changing location along the cycle and maintaining temporal autocorrelation. The suite of vectors and mirrors represent a complete set of possible distributions.
 
 ```{r, message = FALSE}
-rosario_shifts <- rosario(ex1[1,])
+rosario_shifts <- rosario(ex1[1, ])
 head(rosario_shifts)
 ```
  
@@ -59,7 +59,7 @@ This assemblage-wide summary is most informative when you have three or more bio
 ```{r}
 temp_overlap(ex1, method = "pianka")
 
-#or
+# or
 
 temp_overlap(ex1, method = "czekanowski")
 ```

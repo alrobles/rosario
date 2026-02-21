@@ -7,11 +7,10 @@
 #' @export
 #'
 #' @examples
-#' n = 100
-#' p = ifelse(runif(n) > 0.5, 1, 0)
-#' q = ifelse(runif(n) > 0.5, 1, 0)
+#' n <- 100
+#' p <- ifelse(runif(n) > 0.5, 1, 0)
+#' q <- ifelse(runif(n) > 0.5, 1, 0)
 #' czekanowski_index(p, q)
-
-czekanowski_index <- function(p, q){
-  1 - 0.5*sum(abs(p - q))
+czekanowski_index <- function(p, q) {
+  1 - 0.5 * sum(abs(p - q))
 }

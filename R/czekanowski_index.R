@@ -18,11 +18,13 @@
 #' @examples
 #' set.seed(1)
 #' n <- 6
-#' p <- rmultinom(1, 20, rep(1, n))[,1]; p <- p / sum(p)
-#' q <- rmultinom(1, 20, rep(1, n))[,1]; q <- q / sum(q)
+#' p <- rmultinom(1, 20, rep(1, n))[, 1]
+#' p <- p / sum(p)
+#' q <- rmultinom(1, 20, rep(1, n))[, 1]
+#' q <- q / sum(q)
 #' czekanowski_index(p, q)
 #' @export
 #'
-czekanowski_index <- function(p, q){
-  1 - 0.5*sum(abs(p - q))
+czekanowski_index <- function(p, q) {
+  1 - 0.5 * sum(abs(p - q))
 }

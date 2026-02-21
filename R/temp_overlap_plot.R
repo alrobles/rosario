@@ -34,8 +34,10 @@ temp_overlap_plot <- function(results) {
 
   ggplot2::ggplot(data_plot, ggplot2::aes(x = .data$values)) +
     ggplot2::geom_histogram(fill = "#f2f2f2", color = "#595959") +
-    ggplot2::geom_vline(xintercept = results$observed_niche_overlap,
-                        color = "#ae2012", linetype = "dashed") +
+    ggplot2::geom_vline(
+      xintercept = results$observed_niche_overlap,
+      color = "#ae2012", linetype = "dashed"
+    ) +
     ggplot2::theme_light() +
     ggplot2::labs(x = "Simulated overlap values", y = "Frecuencies")
 }

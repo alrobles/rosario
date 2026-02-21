@@ -9,13 +9,11 @@
 #' @return A numeric vector of the same length as `numvec`, rotated so that
 #'   `numvec[x]` is first.
 #' @examples
-#' vec_permutation(1:6, 4)  # 4 5 6 1 2 3
+#' vec_permutation(1:6, 4) # 4 5 6 1 2 3
 #' @export
 #'
-vec_permutation <- function(numvec, x = 1){
-  module_logic <- as.logical((1:length(numvec) %/% x) )
+vec_permutation <- function(numvec, x = 1) {
+  module_logic <- as.logical((1:length(numvec) %/% x))
   module_sequence <- c(which(module_logic), which(!module_logic))
-  numvec[ module_sequence ]
+  numvec[module_sequence]
 }
-
-

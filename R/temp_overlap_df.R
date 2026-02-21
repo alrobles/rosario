@@ -12,8 +12,7 @@
 #' temp_overlap_df(d)
 #' @export
 #'
-temp_overlap_df <- function(mat){
+temp_overlap_df <- function(mat) {
   d <- stats::as.dist(mat)
   broom::tidy(d)
 }
-

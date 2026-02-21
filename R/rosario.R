@@ -18,9 +18,11 @@
 #' @seealso [vec_permutation()], [rosario_sample()]
 #' @export
 
-rosario <- function(numvec){
+rosario <- function(numvec) {
   vecLength <- length(numvec)
-  veclist <- purrr::map(vecLength:2, function(x){vec_permutation(numvec, x)})
+  veclist <- purrr::map(vecLength:2, function(x) {
+    vec_permutation(numvec, x)
+  })
   c(list(numvec), veclist) %>%
     purrr::map(function(x) c(x, rev(x)))
 }
@@ -41,16 +43,16 @@ rosario <- function(numvec){
 #' @seealso [rosario()], [vec_permutation()]
 #' @export
 #'
-rosario_sample <- function(mat){
-  res <-  matrix(data = 0, nrow = nrow(mat), ncol = ncol(mat) )
+rosario_sample <- function(mat) {
+  res <- matrix(data = 0, nrow = nrow(mat), ncol = ncol(mat))
   ncol_mat <- ncol(mat)
-  for(i in 1:nrow(mat)){
+  for (i in 1:nrow(mat)) {
     sample_col <- sample(1:ncol_mat, 1, replace = TRUE)
     flag <- stats::rbinom(1, 1, 0.5)
-    v <- vec_permutation(mat[i, ], sample_col )
-    if(flag){
+    v <- vec_permutation(mat[i, ], sample_col)
+    if (flag) {
       res[i, ] <- v
-    } else{
+    } else {
       res[i, ] <- rev(v)
     }
   }

@@ -43,25 +43,22 @@
 #'
 #' @export
 get_null_model <- function(mat, method, nsim = 100, parallel = FALSE) {
-
-  if(method == "czekanowski"){
+  if (method == "czekanowski") {
     mat <- rosario::rescale_matrix(mat)
   }
 
- niche_overlap_observed <- temp_overlap(mat, method)
+  niche_overlap_observed <- temp_overlap(mat, method)
 
- f <- function() rosario::temp_overlap(rosario::rosario_sample(mat), method)
+  f <- function() rosario::temp_overlap(rosario::rosario_sample(mat), method)
 
-  if(parallel){
+  if (parallel) {
     future::plan(strategy = "multisession")
     res <- furrr::future_map_dfr(1:nsim, \(x) f(), .options = furrr::furrr_options(seed = TRUE))
   } else {
-    res <- purrr::map_dfr(1:nsim, \(x) f(), .progress = TRUE )
-
+    res <- purrr::map_dfr(1:nsim, \(x) f(), .progress = TRUE)
   }
   p_value <- stats::t.test(x = res[[1]], mu = niche_overlap_observed)
   results <- list(niche_overlap_observed, p_value, res)
   names(results) <- c("observed_niche_overlap", "p_value", "null_niche_overlap")
   return(results)
 }
-

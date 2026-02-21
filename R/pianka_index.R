@@ -18,13 +18,14 @@
 #' @examples
 #' set.seed(1)
 #' n <- 10
-#' p <- rpois(n, 3); q <- rpois(n, 3)
+#' p <- rpois(n, 3)
+#' q <- rpois(n, 3)
 #' pianka_index(p, q)
 #' @export
 #'
-pianka_index <- function(p, q){
-  #sum(p * q)/sqrt(sum(p^2 * q^2))
-  sum_pq <- sum(p*q)
-  sum_sqrt <- sqrt(sum(p^2)*sum(q^2))
-  sum_pq/sum_sqrt
+pianka_index <- function(p, q) {
+  # sum(p * q)/sqrt(sum(p^2 * q^2))
+  sum_pq <- sum(p * q)
+  sum_sqrt <- sqrt(sum(p^2) * sum(q^2))
+  sum_pq / sum_sqrt
 }

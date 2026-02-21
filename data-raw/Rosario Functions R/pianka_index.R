@@ -7,12 +7,10 @@
 #' @export
 #'
 #' @examples
-#' n = 100
-#' p = ifelse(runif(n) > 0.5, 1, 0)
-#' q = ifelse(runif(n) > 0.5, 1, 0)
+#' n <- 100
+#' p <- ifelse(runif(n) > 0.5, 1, 0)
+#' q <- ifelse(runif(n) > 0.5, 1, 0)
 #' pianka_index(p, q)
-
-pianka_index <- function(p, q){
-  sum(p*q)/sqrt(sum(p^2)*sum(q^2))
+pianka_index <- function(p, q) {
+  sum(p * q) / sqrt(sum(p^2) * sum(q^2))
 }
-

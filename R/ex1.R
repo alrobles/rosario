@@ -13,6 +13,6 @@
 #' }
 #' @examples
 #' ex1
-#' rowSums(ex1)   # total activity per biological identity
-#' colSums(ex1)   # total activity per time interval
+#' rowSums(ex1) # total activity per biological identity
+#' colSums(ex1) # total activity per time interval
 "ex1"

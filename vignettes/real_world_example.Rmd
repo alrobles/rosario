@@ -83,9 +83,9 @@ bin_species <- function(dat, species_code, bin_mins = 30) {
 Here we generate one binned row per species:
 
 ```{r eval = FALSE}
-mule_deer <- bin_species(Sim_dat, "hemionus")     # Mule deer
-elk      <- bin_species(Sim_dat, "canadensis")    # Elk
-wtd      <- bin_species(Sim_dat, "virginianus")   # White-tailed deer
+mule_deer <- bin_species(Sim_dat, "hemionus") # Mule deer
+elk <- bin_species(Sim_dat, "canadensis") # Elk
+wtd <- bin_species(Sim_dat, "virginianus") # White-tailed deer
 ```
 
 ### 3.3. Combine species rows into the `rosario` input matrix
@@ -95,8 +95,8 @@ We bind the three species rows into a single matrix. Any missing time bins are f
 ```{r eval = FALSE}
 binned_df <- dplyr::bind_rows(
   MuleDeer = mule_deer,
-  Elk      = elk,
-  WTD      = wtd,
+  Elk = elk,
+  WTD = wtd,
   .id = "species"
 )
 
@@ -129,7 +129,7 @@ This section demonstrates how to run the `rosario` workflow using the matrix cre
 The `rosario()` function creates the set of cyclic shifts and their mirror images (reverse order), preserving shape while changing location along the cycle and maintaining temporal autocorrelation. The suite of vectors and mirrors represents a complete set of possible distributions.
 
 ```{r eval = FALSE}
-cervid_shifts <- rosario(data_matrix[1, ])  # example: generate shifts for Mule deer
+cervid_shifts <- rosario(data_matrix[1, ]) # example: generate shifts for Mule deer
 head(cervid_shifts)
 ```
 
@@ -146,10 +146,10 @@ plot_rosario(data_matrix[1, ], cols = 5) # example: visualize shifts for Mule de
 Use `temp_overlap()` to compute the mean of all pairwise overlaps among rows (species), using the chosen index: "pianka" or "czekanowski". This returns the observed assemblage-wide overlap among the cervid species.
 
 ```{r eval = FALSE}
-Results_Pianka <-temp_overlap(data_matrix, method = "pianka") 
+Results_Pianka <- temp_overlap(data_matrix, method = "pianka")
 Results_Pianka
 
-Results_Czekanowski <-temp_overlap(data_matrix, method = "czekanowski")
+Results_Czekanowski <- temp_overlap(data_matrix, method = "czekanowski")
 Results_Czekanowski
 ```
 

@@ -20,7 +20,7 @@
 #' }
 #'
 #' @examples
-#' one <- c(0,5,0,7,5,13,70,0)
+#' one <- c(0, 5, 0, 7, 5, 13, 70, 0)
 #' plot_rosario(one, cols = 4)
 #'
 #' @importFrom graphics par barplot axis box mtext
@@ -44,31 +44,36 @@ plot_rosario <- function(numvec, normalize = TRUE, cols = 4) {
 
   # Optional normalization: scale each half separately to sum to 1
   if (normalize) {
-    real_half   <- mat2k[, 1:k, drop = FALSE]
+    real_half <- mat2k[, 1:k, drop = FALSE]
     mirror_half <- mat2k[, (k + 1):(2 * k), drop = FALSE]
-    rs <- rowSums(real_half);   rs[rs == 0] <- 1
-    ms <- rowSums(mirror_half); ms[ms == 0] <- 1
-    mat2k[, 1:k]           <- real_half   / rs
-    mat2k[, (k + 1):(2*k)] <- mirror_half / ms
+    rs <- rowSums(real_half)
+    rs[rs == 0] <- 1
+    ms <- rowSums(mirror_half)
+    ms[ms == 0] <- 1
+    mat2k[, 1:k] <- real_half / rs
+    mat2k[, (k + 1):(2 * k)] <- mirror_half / ms
   }
 
   # Colors (fixed): Real = dark gray, Mirror = dark red
-  col_real   <- "#343a40"
+  col_real <- "#343a40"
   col_mirror <- "#9a031e"
-  bar_cols   <- c(rep(col_real, k), rep(col_mirror, k))
+  bar_cols <- c(rep(col_real, k), rep(col_mirror, k))
 
   # X labels: 1..k for real, 1..k for mirror (all numbers shown)
   xlabs <- c(seq_len(k), seq_len(k))
 
   # Safe par handling
-  old_par <- par(no.readonly = TRUE); on.exit(par(old_par), add = TRUE)
+  old_par <- par(no.readonly = TRUE)
+  on.exit(par(old_par), add = TRUE)
 
   n <- nrow(mat2k)
   ncol <- max(1L, as.integer(cols))
   nrow <- ceiling(n / ncol)
-  par(mfrow = c(nrow, ncol),
-      mar = c(3.5, 3.0, 1.5, 0.8),
-      oma = c(2.5, 3.2, 2.2, 1.2))
+  par(
+    mfrow = c(nrow, ncol),
+    mar = c(3.5, 3.0, 1.5, 0.8),
+    oma = c(2.5, 3.2, 2.2, 1.2)
+  )
 
   ymax <- max(mat2k, 0)
 
@@ -76,12 +81,13 @@ plot_rosario <- function(numvec, normalize = TRUE, cols = 4) {
   for (i in seq_len(n)) {
     v <- mat2k[i, ]
     barplot(v,
-            col = bar_cols,
-            border = NA,
-            ylim = c(0, ymax * 1.05),
-            names.arg = xlabs,
-            cex.names = 0.7,
-            axes = FALSE)
+      col = bar_cols,
+      border = NA,
+      ylim = c(0, ymax * 1.05),
+      names.arg = xlabs,
+      cex.names = 0.7,
+      axes = FALSE
+    )
     axis(2, las = 1, cex.axis = 0.8)
     box(bty = "l")
   }
@@ -89,7 +95,8 @@ plot_rosario <- function(numvec, normalize = TRUE, cols = 4) {
   # Outer axis labels
   mtext("Time interval", side = 1, outer = TRUE, line = 1.0)
   mtext(if (normalize) "Percentage of activity" else "Activity",
-        side = 2, outer = TRUE, line = 1.6)
+    side = 2, outer = TRUE, line = 1.6
+  )
 
   invisible(list(
     variants = variants,
