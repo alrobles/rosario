@@ -93,9 +93,9 @@ bin_species <- function(dat, species_code, bin_mins = 30) {
 Here we generate one binned row per species:
 
 ``` r
-mule_deer <- bin_species(Sim_dat, "hemionus")     # Mule deer
-elk      <- bin_species(Sim_dat, "canadensis")    # Elk
-wtd      <- bin_species(Sim_dat, "virginianus")   # White-tailed deer
+mule_deer <- bin_species(Sim_dat, "hemionus") # Mule deer
+elk <- bin_species(Sim_dat, "canadensis") # Elk
+wtd <- bin_species(Sim_dat, "virginianus") # White-tailed deer
 ```
 
 ### 3.3. Combine species rows into the `rosario` input matrix
@@ -107,8 +107,8 @@ all entries are numeric.
 ``` r
 binned_df <- dplyr::bind_rows(
   MuleDeer = mule_deer,
-  Elk      = elk,
-  WTD      = wtd,
+  Elk = elk,
+  WTD = wtd,
   .id = "species"
 )
 
@@ -150,7 +150,7 @@ cycle and maintaining temporal autocorrelation. The suite of vectors and
 mirrors represents a complete set of possible distributions.
 
 ``` r
-cervid_shifts <- rosario(data_matrix[1, ])  # example: generate shifts for Mule deer
+cervid_shifts <- rosario(data_matrix[1, ]) # example: generate shifts for Mule deer
 head(cervid_shifts)
 ```
 
@@ -178,10 +178,10 @@ the chosen index: “pianka” or “czekanowski”. This returns the observed
 assemblage-wide overlap among the cervid species.
 
 ``` r
-Results_Pianka <-temp_overlap(data_matrix, method = "pianka") 
+Results_Pianka <- temp_overlap(data_matrix, method = "pianka")
 Results_Pianka
 
-Results_Czekanowski <-temp_overlap(data_matrix, method = "czekanowski")
+Results_Czekanowski <- temp_overlap(data_matrix, method = "czekanowski")
 Results_Czekanowski
 ```
 

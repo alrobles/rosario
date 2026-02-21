@@ -40,7 +40,7 @@ the cycle and maintaining temporal autocorrelation. The suite of vectors
 and mirrors represent a complete set of possible distributions.
 
 ``` r
-rosario_shifts <- rosario(ex1[1,])
+rosario_shifts <- rosario(ex1[1, ])
 head(rosario_shifts)
 #> [[1]]
 #>  INT1  INT2  INT3  INT4  INT5  INT6  INT7  INT8  INT9 INT10 INT11 INT12 INT12 
@@ -114,7 +114,7 @@ temp_overlap(ex1, method = "pianka")
 #>    pianka 
 #> 0.9975192
 
-#or
+# or
 
 temp_overlap(ex1, method = "czekanowski")
 #> czekanowski 

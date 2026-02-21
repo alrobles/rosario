@@ -153,9 +153,9 @@ are detection counts.</p>
 </h3>
 <p>Here we generate one binned row per species:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mule_deer</span> <span class="op">&lt;-</span> <span class="fu">bin_species</span><span class="op">(</span><span class="va">Sim_dat</span>, <span class="st">"hemionus"</span><span class="op">)</span>     <span class="co"># Mule deer</span></span>
-<span><span class="va">elk</span>      <span class="op">&lt;-</span> <span class="fu">bin_species</span><span class="op">(</span><span class="va">Sim_dat</span>, <span class="st">"canadensis"</span><span class="op">)</span>    <span class="co"># Elk</span></span>
-<span><span class="va">wtd</span>      <span class="op">&lt;-</span> <span class="fu">bin_species</span><span class="op">(</span><span class="va">Sim_dat</span>, <span class="st">"virginianus"</span><span class="op">)</span>   <span class="co"># White-tailed deer</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mule_deer</span> <span class="op">&lt;-</span> <span class="fu">bin_species</span><span class="op">(</span><span class="va">Sim_dat</span>, <span class="st">"hemionus"</span><span class="op">)</span> <span class="co"># Mule deer</span></span>
+<span><span class="va">elk</span> <span class="op">&lt;-</span> <span class="fu">bin_species</span><span class="op">(</span><span class="va">Sim_dat</span>, <span class="st">"canadensis"</span><span class="op">)</span> <span class="co"># Elk</span></span>
+<span><span class="va">wtd</span> <span class="op">&lt;-</span> <span class="fu">bin_species</span><span class="op">(</span><span class="va">Sim_dat</span>, <span class="st">"virginianus"</span><span class="op">)</span> <span class="co"># White-tailed deer</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="combine-species-rows-into-the-rosario-input-matrix">3.3. Combine species rows into the <code>rosario</code> input
@@ -167,8 +167,8 @@ all entries are numeric.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">binned_df</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">bind_rows</a></span><span class="op">(</span></span>
 <span>  MuleDeer <span class="op">=</span> <span class="va">mule_deer</span>,</span>
-<span>  Elk      <span class="op">=</span> <span class="va">elk</span>,</span>
-<span>  WTD      <span class="op">=</span> <span class="va">wtd</span>,</span>
+<span>  Elk <span class="op">=</span> <span class="va">elk</span>,</span>
+<span>  WTD <span class="op">=</span> <span class="va">wtd</span>,</span>
 <span>  .id <span class="op">=</span> <span class="st">"species"</span></span>
 <span><span class="op">)</span></span>
 <span></span>
@@ -207,7 +207,7 @@ location along the cycle and maintaining temporal autocorrelation. The
 suite of vectors and mirrors represents a complete set of possible
 distributions.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">cervid_shifts</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rosario.html">rosario</a></span><span class="op">(</span><span class="va">data_matrix</span><span class="op">[</span><span class="fl">1</span>, <span class="op">]</span><span class="op">)</span>  <span class="co"># example: generate shifts for Mule deer</span></span>
+<code class="sourceCode R"><span><span class="va">cervid_shifts</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rosario.html">rosario</a></span><span class="op">(</span><span class="va">data_matrix</span><span class="op">[</span><span class="fl">1</span>, <span class="op">]</span><span class="op">)</span> <span class="co"># example: generate shifts for Mule deer</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">cervid_shifts</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
@@ -230,10 +230,10 @@ overlaps among rows (species), using the chosen index: “pianka” or
 “czekanowski”. This returns the observed assemblage-wide overlap among
 the cervid species.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">Results_Pianka</span> <span class="op">&lt;-</span><span class="fu"><a href="../reference/temp_overlap.html">temp_overlap</a></span><span class="op">(</span><span class="va">data_matrix</span>, method <span class="op">=</span> <span class="st">"pianka"</span><span class="op">)</span> </span>
+<code class="sourceCode R"><span><span class="va">Results_Pianka</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/temp_overlap.html">temp_overlap</a></span><span class="op">(</span><span class="va">data_matrix</span>, method <span class="op">=</span> <span class="st">"pianka"</span><span class="op">)</span></span>
 <span><span class="va">Results_Pianka</span></span>
 <span></span>
-<span><span class="va">Results_Czekanowski</span> <span class="op">&lt;-</span><span class="fu"><a href="../reference/temp_overlap.html">temp_overlap</a></span><span class="op">(</span><span class="va">data_matrix</span>, method <span class="op">=</span> <span class="st">"czekanowski"</span><span class="op">)</span></span>
+<span><span class="va">Results_Czekanowski</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/temp_overlap.html">temp_overlap</a></span><span class="op">(</span><span class="va">data_matrix</span>, method <span class="op">=</span> <span class="st">"czekanowski"</span><span class="op">)</span></span>
 <span><span class="va">Results_Czekanowski</span></span></code></pre></div>
 </div>
 <div class="section level3">

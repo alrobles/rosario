@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   introduction_to_rosario: introduction_to_rosario.html
   real_world_example: real_world_example.html
-last_built: 2026-02-21T07:08Z
+last_built: 2026-02-21T07:31Z
 urls:
   reference: https://alrobles.github.io/rosario/reference
   article: https://alrobles.github.io/rosario/articles
