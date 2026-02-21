@@ -1,6 +1,9 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
 <url><loc>https://alrobles.github.io/rosario/404.html</loc></url>
 <url><loc>https://alrobles.github.io/rosario/LICENSE.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/articles/index.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/articles/introduction_to_rosario.html</loc></url>
+<url><loc>https://alrobles.github.io/rosario/articles/real_world_example.html</loc></url>
 <url><loc>https://alrobles.github.io/rosario/authors.html</loc></url>
 <url><loc>https://alrobles.github.io/rosario/index.html</loc></url>
 <url><loc>https://alrobles.github.io/rosario/news/index.html</loc></url>

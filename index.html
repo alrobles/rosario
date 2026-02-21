@@ -22,7 +22,7 @@
 
     <a class="navbar-brand me-2" href="index.html">rosario</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +32,13 @@
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
 <li class="nav-item"><a class="nav-link" href="reference/index.html">Reference</a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
+<li><a class="dropdown-item" href="articles/introduction_to_rosario.html">Introduction to rosario</a></li>
+    <li><a class="dropdown-item" href="articles/real_world_example.html">Real-world example</a></li>
+  </ul>
+</li>
 <li class="nav-item"><a class="nav-link" href="news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
@@ -59,34 +66,36 @@
 <code class="sourceCode R"><span><span class="co"># Install devtools if you don't have it</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Install commecometrics from GitHub</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"mariahm1995/rosario"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="co"># Install rosario from GitHub</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"alrobles/rosario"</span><span class="op">)</span></span></code></pre></div>
 <p>You can also get the official release version from CRAN</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rosario"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+<h2 id="learn-more">Learn More<a class="anchor" aria-label="anchor" href="#learn-more"></a>
 </h2>
-<p>This is a basic example which shows you how to solve a common problem:</p>
+<p>Two vignettes demonstrate the full workflow and capabilities of the package:</p>
+<ul>
+<li><p><strong>Introduction to rosario</strong><br>
+Overview of <code>rosario</code> workflow.</p></li>
+<li><p><strong>Real-world example</strong><br>
+Demonstration of <code>rosario</code> workflow with a real-world dataset.</p></li>
+</ul>
+<p>You can also access them from within R:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://alrobles.github.io/rosario/">rosario</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Example data</span></span>
-<span><span class="va">ex1</span></span>
-<span></span>
-<span><span class="co"># Assemblage-wide overlap</span></span>
-<span><span class="fu"><a href="reference/temp_overlap.html">temp_overlap</a></span><span class="op">(</span><span class="va">ex1</span>, method <span class="op">=</span> <span class="st">"pianka"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Null model test</span></span>
-<span><span class="va">nm</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_null_model.html">get_null_model</a></span><span class="op">(</span><span class="va">ex1</span>, method <span class="op">=</span> <span class="st">"pianka"</span>, nsim <span class="op">=</span> <span class="fl">200</span>, parallel <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
-<span><span class="va">nm</span><span class="op">$</span><span class="va">p_value</span></span>
-<span></span>
-<span><span class="co"># Visualize ROSARIO patterns</span></span>
-<span><span class="fu"><a href="reference/plot_rosario.html">plot_rosario</a></span><span class="op">(</span><span class="va">ex1</span><span class="op">[</span><span class="fl">1</span>, <span class="op">]</span>, cols <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/vignette.html" class="external-link">vignette</a></span><span class="op">(</span><span class="st">"introduction_to_rosario"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/vignette.html" class="external-link">vignette</a></span><span class="op">(</span><span class="st">"real_world_example"</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
-  </main><aside class="col-md-3"><div class="license">
+  </main><aside class="col-md-3"><div class="links">
+<h2 data-toc-skip>Links</h2>
+<ul class="list-unstyled">
+<li><a href="https://cloud.r-project.org/package=rosario" class="external-link">View on CRAN</a></li>
+</ul>
+</div>
+
+<div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
@@ -107,8 +116,8 @@
 <ul class="list-unstyled">
 <li>Ángel L. Robles-Fernández <br><small class="roles"> Author </small>   </li>
 <li>Maria A. Hurtado-Materon <br><small class="roles"> Author </small>   </li>
-<li>Tatiana Velásquez-Roa <br><small class="roles"> Author, thesis advisor </small>   </li>
-<li>Iván Castro-Arellano <br><small class="roles"> Maintainer </small>   </li>
+<li>Tatiana Velásquez-Roa <br><small class="roles"> Maintainer, author </small>   </li>
+<li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
 
@@ -119,11 +128,11 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Ángel L. Robles-Fernández, Maria A. Hurtado-Materon, Tatiana Velásquez-Roa, Iván Castro-Arellano.</p>
+  <p>Developed by Ángel L. Robles-Fernández, Maria A. Hurtado-Materon, Tatiana Velásquez-Roa.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>

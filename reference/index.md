@@ -1,0 +1,30 @@
+# Package index
+
+## All functions
+
+- [`czekanowski_index()`](https://alrobles.github.io/rosario/reference/czekanowski_index.md)
+  : Czekanowski overlap index
+- [`ex1`](https://alrobles.github.io/rosario/reference/ex1.md) : Example
+  temporal activity dataset
+- [`get_null_model()`](https://alrobles.github.io/rosario/reference/get_null_model.md)
+  : Null-model test via ROSARIO algorithm randomization
+- [`pianka_index()`](https://alrobles.github.io/rosario/reference/pianka_index.md)
+  : Pianka's niche-overlap index
+- [`plot_rosario()`](https://alrobles.github.io/rosario/reference/plot_rosario.md)
+  : Diagram of ROSARIO null-model randomizations
+- [`rescale_matrix()`](https://alrobles.github.io/rosario/reference/rescale_matrix.md)
+  : Row-wise rescaling of a matrix to relative frequencies
+- [`rosario()`](https://alrobles.github.io/rosario/reference/rosario.md)
+  : Generate cyclic and mirrored permutations of a time series
+- [`rosario_sample()`](https://alrobles.github.io/rosario/reference/rosario_sample.md)
+  : ROSARIO randomization of an assemblage matrix
+- [`temp_overlap()`](https://alrobles.github.io/rosario/reference/temp_overlap.md)
+  : Assemblage-wide temporal niche segregation
+- [`temp_overlap_df()`](https://alrobles.github.io/rosario/reference/temp_overlap_df.md)
+  : Convert a square overlap matrix to a tidy pairwise data frame
+- [`temp_overlap_matrix()`](https://alrobles.github.io/rosario/reference/temp_overlap_matrix.md)
+  : Pairwise temporal niche-overlap matrix
+- [`temp_overlap_plot()`](https://alrobles.github.io/rosario/reference/temp_overlap_plot.md)
+  : Plot null-model results for temporal niche overlap
+- [`vec_permutation()`](https://alrobles.github.io/rosario/reference/vec_permutation.md)
+  : Cyclic permutation (rotate) a numeric vector

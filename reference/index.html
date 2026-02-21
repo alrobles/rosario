@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">rosario</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,6 +16,11 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/introduction_to_rosario.html">Introduction to rosario</a></li>
+    <li><a class="dropdown-item" href="../articles/real_world_example.html">Real-world example</a></li>
+  </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
@@ -35,8 +40,7 @@
 
 
 
-
-    </div><div class="section level2">
+      <dl></dl></div><div class="section level2">
 
 
 
@@ -47,73 +51,85 @@
 
         </dt>
         <dd>Czekanowski overlap index</dd>
-      </dl><dl><dt>
+
+        <dt>
 
           <code><a href="ex1.html">ex1</a></code>
 
         </dt>
         <dd>Example temporal activity dataset</dd>
-      </dl><dl><dt>
+
+        <dt>
 
           <code><a href="get_null_model.html">get_null_model()</a></code>
 
         </dt>
         <dd>Null-model test via ROSARIO algorithm randomization</dd>
-      </dl><dl><dt>
+
+        <dt>
 
           <code><a href="pianka_index.html">pianka_index()</a></code>
 
         </dt>
         <dd>Pianka's niche-overlap index</dd>
-      </dl><dl><dt>
+
+        <dt>
 
           <code><a href="plot_rosario.html">plot_rosario()</a></code>
 
         </dt>
         <dd>Diagram of ROSARIO null-model randomizations</dd>
-      </dl><dl><dt>
+
+        <dt>
 
           <code><a href="rescale_matrix.html">rescale_matrix()</a></code>
 
         </dt>
         <dd>Row-wise rescaling of a matrix to relative frequencies</dd>
-      </dl><dl><dt>
+
+        <dt>
 
           <code><a href="rosario.html">rosario()</a></code>
 
         </dt>
         <dd>Generate cyclic and mirrored permutations of a time series</dd>
-      </dl><dl><dt>
+
+        <dt>
 
           <code><a href="rosario_sample.html">rosario_sample()</a></code>
 
         </dt>
         <dd>ROSARIO randomization of an assemblage matrix</dd>
-      </dl><dl><dt>
+
+        <dt>
 
           <code><a href="temp_overlap.html">temp_overlap()</a></code>
 
         </dt>
         <dd>Assemblage-wide temporal niche segregation</dd>
-      </dl><dl><dt>
+
+        <dt>
 
           <code><a href="temp_overlap_df.html">temp_overlap_df()</a></code>
 
         </dt>
         <dd>Convert a square overlap matrix to a tidy pairwise data frame</dd>
-      </dl><dl><dt>
+
+        <dt>
 
           <code><a href="temp_overlap_matrix.html">temp_overlap_matrix()</a></code>
 
         </dt>
         <dd>Pairwise temporal niche-overlap matrix</dd>
-      </dl><dl><dt>
+
+        <dt>
 
           <code><a href="temp_overlap_plot.html">temp_overlap_plot()</a></code>
 
         </dt>
         <dd>Plot null-model results for temporal niche overlap</dd>
-      </dl><dl><dt>
+
+        <dt>
 
           <code><a href="vec_permutation.html">vec_permutation()</a></code>
 
@@ -124,11 +140,11 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Ángel L. Robles-Fernández, Maria A. Hurtado-Materon, Tatiana Velásquez-Roa, Iván Castro-Arellano.</p>
+  <p>Developed by Ángel L. Robles-Fernández, Maria A. Hurtado-Materon, Tatiana Velásquez-Roa.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer></div>
